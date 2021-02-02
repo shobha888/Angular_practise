@@ -1,0 +1,55 @@
+<h1>hello world!</h1>
+<app-login></app-login>
+<app-singup></app-singup>
+<h2>learing function call on button click</h2>
+<button (click)="myEvent('this is my click event')"> click me </button>
+<br>
+<br>
+<input type="text" (keyup) = "myEvent('keyup event')" />
+<br>
+<br>
+<input type="text" #box1 (keyup) = " myEvent(box1.value)" />
+<br>
+<br>
+<input type="text" #box2 (keyup.enter) = "myEvent(box2.value)" />
+<br>
+<br>
+<input type="text" #box3 (keydown) = "myEvent(box3.value)" />
+<br>
+<input type="text" #box4 (keydown) = "myEvent(box4.value)" />
+<br>
+<br>
+<input type="text" (blur) = "myEvent('blur event')" />
+<br>
+<br>
+<div (mouseover) = "myEvent('mouse on an element')"
+style = "background-color: blueviolet;">
+mouseevent
+</div>
+<br>
+<br>
+<div (mouseleave) = "myEvent('mouse out/leave an element')"
+    style = "background-color: red;">
+    mouseevent
+</div>
+<br>
+<br>
+
+<input type="text" (keyup) = "GetValue1($event)" />
+
+<br>
+<input type="text" #box5 />
+<button (click)="GetValue(box5.value)" >{{MyButtonText}}</button>
+<h2 >{{currentval}}</h2>
+
+<input type="text" [disabled] = "disablebox" [value] = "name" />
+<br>
+<br>
+<input type="text" disabled = {{disablebox}} value = {{name}} />
+<br>
+<br>
+<button (click) = "enablebox()"> enable the boxes</button>
+
+
+
+
